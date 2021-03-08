@@ -4,9 +4,8 @@
 #include <algorithm>
 #include <random>
 #include <time.h>
-using namespace std;
-
 #define int long long
+using namespace std;
 
 
 template <typename T1, typename T2>
@@ -15,8 +14,6 @@ public:
     T1 first;
     T2 second;
 
-
-
     Pair ()= default;
 
     Pair  (const T1 a, const T2 b){
@@ -24,12 +21,9 @@ public:
         second = b;
     }
 
-    //~Pair  ();
-
     Pair  (const Pair & copied){
         first = copied.first;
         second = copied.second;
-        //return (*this);
     }
 
     Pair  & operator=(const Pair & copied){
@@ -37,7 +31,6 @@ public:
         second = copied.second;
         return (*this);
     }
-
 
     bool operator==(const Pair & other) const {
         if (other.first == first && other.second == second){
@@ -81,27 +74,10 @@ public:
         return false;
     }
 
-
 };
-
-//template <typename T3, typename T4>
-
-//Pair make_pair(T3 a, T4 b){
-
-//}
-
-//template <typename T3, typename T4>
-
-/*Pair<T3, T4> make_pair(T3 a, T4 b){
-    Pair <T3, T4> f;
-    f.first = a;
-    f.second = b;
-    return f;
-}*/
 
 
 template <typename T>
-
 vector <T> mySort(vector <T> &a){
     int s = a.size();
 
@@ -121,8 +97,6 @@ vector <T> mySort(vector <T> &a){
 
 
 signed main() {
-
-    //Pair <int, double> vvv;
     srand(time(NULL));
     int n = 10 + rand() % 10;
     vector<pair<int, double> > a(n);
